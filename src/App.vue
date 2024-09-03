@@ -91,14 +91,14 @@ const onSelect = (args) => {
     font-family: "Roboto";
     font-size: 20px;
     text-align: center;
-    padding-top: 52px;
+    padding-top: 30px;
     padding-left: 30px;
 }
 
 .sidebar-content {
   font-size: 25px;
   text-align: center;
-  padding-top: 50px;
+ /* padding-top: 50px;*/
 }
 
 .e-sidebar.e-left {
