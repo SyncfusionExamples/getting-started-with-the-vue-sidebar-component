@@ -16,7 +16,7 @@ const listData = [
       id: "2",
       text: "TypeScript", 
       description: "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript." + 
-        "TypeScript is an open-source, object-oriented programing language."},
+        "TypeScript is an open-source, object-oriented programming language."},
     { 
       id: "3",
       text: "Angular", 
@@ -49,7 +49,6 @@ const onSelect = (args) => {
     mainContent.innerHTML = args.data.description;
   }
 };
-
 </script>
 
 <template>
@@ -57,19 +56,23 @@ const onSelect = (args) => {
   <div class="header">
     <span style="float:left;" >
       <ejs-button class="customBtn" iconCss="e-icons e-menu"
-      v-on:click="buttonClick">Language</ejs-button>
+      v-on:click="buttonClick">LANGUAGE</ejs-button>
     </span>
     <span>Header</span>
   </div>
-  <ejs-sidebar width="250px">
-    <div class="sidebar-content">      
+    <ejs-sidebar ref="sidebar" width='250px' position="Left"
+    type="Over">
+    <div class="sidebar-content">
       <ejs-listview
-      :dataSource='listData' :fields='listFields'>
+      :dataSource='listData' :fields='listFields'
+      :select='onSelect'>
       </ejs-listview>
     </div>
   </ejs-sidebar>
   <div class="main-content">
-     Main Content
+    Before getting into any programming language, one should have basic knowledge about HTML, 
+    CSS, and JavaScript. These are the basic building blocks of web designing. HTML describes 
+    the structure of a web page whereas CSS describes the presentation of the web page.
   </div>
 </div>
 </template>
@@ -88,17 +91,17 @@ const onSelect = (args) => {
 }
 
 .main-content {
-    font-family: "Roboto";
-    font-size: 20px;
-    text-align: center;
+    font-size: 18px;
+    /* text-align: center; */
     padding-top: 30px;
     padding-left: 30px;
 }
 
 .sidebar-content {
   font-size: 25px;
-  text-align: center;
- /* padding-top: 50px;*/
+  text-align: Left;
+  background: #f8f8f8;
+  /* padding-top: 50px;  */
 }
 
 .e-sidebar.e-left {
@@ -113,5 +116,6 @@ const onSelect = (args) => {
   color: white !important;
   background-color: midnightblue !important;
   border-color: midnightblue !important;
+  margin-bottom: 5px;
 }
 </style>
